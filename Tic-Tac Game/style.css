@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Quintessential&family=Titillium+Web:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Quintessential', cursive;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    background-color: rgb(57, 128, 235);;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+#board {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    justify-content: center;
+}
+.box {
+    border: 0 solid black;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vw;
+    cursor: pointer;
+    height: 100%;
+    color: rgb(57, 128, 235);
+    text-shadow: 0 0 10px rgb(57, 128, 235);
+}
+
+.box:hover {
+    background-color: rgb(229, 221, 236);
+    border-radius: 5px;
+}
+
+.bl {
+    border-left: 0;
+}
+
+.br {
+    border-right: 0;
+}
+
+.bt {
+    border-top: 0;
+}
+
+.bb {
+    border-bottom: 0;
+}
+
+.btr {
+    border-top-right-radius: 10px;
+}
+
+.btl {
+    border-top-left-radius: 10px;
+}
+
+.bbl {
+    border-bottom-left-radius: 10px;
+}
+
+.bbr {
+    border-bottom-right-radius: 10px;
+}
+
+#info {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-left: 5px solid rgb(57, 128, 235);;
+
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 200;
+    margin-left: 50px;
+    border-radius: 5px;
+    border: 2px solid rgb(57, 128, 235);
+    background-color: white;
+    cursor: pointer;
+}
+
+.turn {
+    display: block;
+    padding: 10px;
+    margin-bottom: 100px;
+    font-size: 30px;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+}
+
+.gameOverMessage {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+#playerTurnTitle,.gameOverMessage {
+    color: rgb(57, 128, 235);
+    text-shadow: 0 0 10px rgb(57, 128, 235);
+    
+}
+
+.line {
+    /* background-color: black; */
+    height: 3px ;
+    position: absolute;
+    width: 0;
+    background-color: rgb(57, 128, 235);
+    transition: width 0.7s ease-in-out ;
+}
+
+#mode{
+    display: none;
+}
+
+#dark {
+    display: block;
+    font-size: 50px;
+    color: rgb(57, 128, 235);
+    cursor: pointer;
+}
+ i{
+    /* position: absolute; */
+ }
+
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+
+
+    #container {
+        display: block;
+        margin: auto;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #board {
+        margin: 30px auto;
+        width: 100%;
+        height: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 15vw);
+        grid-template-rows: repeat(3, 15vw);
+        justify-content: center;
+    }
+    
+    #info {
+        margin: auto;
+        border-top: 5px solid rgb(57, 128, 235);
+        border-left: 0px;
+        width: 80%;
+        display: block;
+        margin-top: 100px;
+        padding-top: 20px;
+    }
+
+    .turn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    #resetBtn {
+        display: block;
+        margin: auto;
+        border: 2px solid rgb(57, 128, 235);
+    }
+
+    h3{
+        font-size: 20px;
+    }
+    #playerTurnTitle,.gameOverMessage {
+        color: rgb(57, 128, 235);
+        text-shadow: 0 0 10px rgb(57, 128, 235);
+        
+    }
+
+    .line {
+        height: 2px;
+    }
+
+    #mode {
+        display: block;
+        margin-left: 300px;
+        margin-top: 10px;
+        font-size: 25px;
+        color: rgb(57, 128, 235);
+    }
+    #dark {
+        display: none;
+    }
+
+
+}
